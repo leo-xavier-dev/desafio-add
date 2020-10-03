@@ -1,3 +1,5 @@
+import { Thumbnail } from './thumbnail';
+
 export interface Character {
   id :number;
   name: string;
@@ -5,7 +7,7 @@ export interface Character {
   modified :Date;
   resourceURI :string;
   urls :object;
-  thumbnail :string;
+  thumbnail :Thumbnail;
 // comics :ComicList;
 // stories :StoryList;
 // events :EventList;
