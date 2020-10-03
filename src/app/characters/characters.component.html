@@ -1,0 +1,34 @@
+<div fxFlex fxLayout="column">
+  <div fxLayout="row wrap">
+
+    <div class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+    >
+
+      <p *ngFor="let character of allCharacters" style="margin: 300px">
+        {{ character.name}}
+      </p>
+
+    </div>
+
+      <div fxFlex="25" fxFlex.md="33" fxFle.sm="50" fxFlex.xs="100" fxLayout="column"
+        *ngFor="let character of allCharacters"
+        style="padding: 15px">
+
+           <mat-card>
+             <img mat-card-image src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+             <mat-card-title>
+               {{character.name}}
+             </mat-card-title>
+           </mat-card>
+
+      </div>
+
+      <span>
+        {{metadata | json}}
+      </span>
+  </div>
+</div>
