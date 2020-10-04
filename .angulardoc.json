@@ -1,4 +1,29 @@
 {
+  "name": "ngx-infinite-scroll",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^9.0.0",
+    "@angular/compiler": "6.0.0",
+    "@angular/core": "^9.0.0",
+    "@angular/forms": "^9.0.0",
+    "@angular/platform-browser": "6.0.0",
+    "@angular/platform-browser-dynamic": "6.0.0",
+    "@angular/router": "^9.0.0",
+    "core-js": "2.5.5",
+    "ngx-infinite-scroll": "^9.0.0",
+    "rxjs": "^6.1.0",
+    "tslib": "^1.10.0",
+    "zone.js": "^0.8.26"
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
   "repoId": "a213fff2-fa9a-4709-8ecd-a330d788d9d9",
   "lastSync": 0
 }

@@ -1,6 +1,6 @@
+import { ApiServiceService } from './../services/api-service.service';
 import { Character } from './../models/character';
 
-import { CharactersApiService } from './character/shared/characters-api.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -13,7 +13,9 @@ import { Observable } from 'rxjs';
 
 export class CharactersComponent implements OnInit {
 
-  constructor(private characterSvc: CharactersApiService) { }
+  constructor(private characterSvc: ApiServiceService) {
+
+  }
 
   metadata: Object;
   allCharacters: Character[];
@@ -29,22 +31,12 @@ export class CharactersComponent implements OnInit {
     this.getCharacters();
   }
 
-  // getCharacters() {
-  //   debugger
-  //   this.allCharacters = this.characterSvc.getAllCharacters();
-  // }
-
   onScroll() {
     console.log('onScroll')
   }
 
   getCharacters() {
     this.characterSvc.getAllCharacters(this.metadata).subscribe((characters: Character[]) => {
-
-      // "offset": 0,
-      // "limit": 20,
-      // "total": 47714,
-      // "count": 20,
 
       this.metadata = {
         offset: characters['data']['offset'],
@@ -57,4 +49,6 @@ export class CharactersComponent implements OnInit {
 
     });
   }
+
+
 }

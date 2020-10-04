@@ -17,14 +17,20 @@ import { FlexLayoutModule} from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { ComicsComponent } from './comics/comics.component';
+import { ComicComponent } from './comics/comic/comic.component';
+import { InfinitescrollComponent } from './infinitescroll/infinitescroll.component';
 
-
+declare const chance;
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    CharactersComponent
+    CharactersComponent,
+    ComicsComponent,
+    ComicComponent,
+    InfinitescrollComponent
   ],
   imports: [
     BrowserModule,
