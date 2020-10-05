@@ -9,9 +9,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "engines": {
-    "node": "12.x"
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.3",
@@ -29,9 +26,7 @@
     "ngx-infinite-scroll": "^9.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.3",
